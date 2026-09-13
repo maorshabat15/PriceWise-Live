@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+/* 
+ * Global Accessibility Enhancements (WCAG 2.1 AA Compliance) 
+ */
+
+/* Standard clear focus rings for all keyboard navigation */
+:focus-visible {
+  outline: 2px solid #f59e0b !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.25) !important;
+}
+
+/* Accessibility: Enhanced Focus Mode */
+html.a11y-highlight-focus :focus-visible {
+  outline: 3px solid #eab308 !important;
+  outline-offset: 4px !important;
+  box-shadow: 0 0 0 6px rgba(234, 179, 8, 0.5) !important;
+}
+
+/* Accessibility: Underline Links & Buttons */
+html.a11y-underline-links a,
+html.a11y-underline-links button[role="link"],
+html.a11y-underline-links nav a,
+html.a11y-underline-links .underline-target {
+  text-decoration: underline !important;
+  text-underline-offset: 4px !important;
+  text-decoration-thickness: 2px !important;
+}
+
+/* Accessibility: Stop Animations / Reduced Motion */
+html.a11y-stop-animations,
+html.a11y-stop-animations *,
+html.a11y-stop-animations *::before,
+html.a11y-stop-animations *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Accessibility: Readable Font (Sans-Serif, High Legibility, Increased Letter & Line Spacing) */
+html.a11y-readable-font,
+html.a11y-readable-font body,
+html.a11y-readable-font p,
+html.a11y-readable-font span,
+html.a11y-readable-font div,
+html.a11y-readable-font input,
+html.a11y-readable-font button {
+  font-family: Arial, Helvetica, system-ui, -apple-system, sans-serif !important;
+  letter-spacing: 0.035em !important;
+  line-height: 1.65 !important;
+}
+
+/* Accessibility: Contrast Modes */
+html.a11y-high-contrast {
+  filter: contrast(135%) saturate(110%);
+}
+
+html.a11y-high-yellow {
+  filter: contrast(150%);
+}
+html.a11y-high-yellow body {
+  background-color: #000000 !important;
+  color: #ffff00 !important;
+}
+html.a11y-high-yellow a,
+html.a11y-high-yellow button,
+html.a11y-high-yellow input {
+  border-color: #ffff00 !important;
+}
+
+html.a11y-monochrome {
+  filter: grayscale(100%) contrast(115%);
+}
+
+html.a11y-invert {
+  filter: invert(100%) hue-rotate(180deg);
+}
+html.a11y-invert img,
+html.a11y-invert video {
+  filter: invert(100%) hue-rotate(180deg);
+}
+
+/* Accessibility: Big High-Visibility Cursor */
+html.a11y-big-cursor,
+html.a11y-big-cursor * {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 24 24' fill='%23f59e0b' stroke='%23000000' stroke-width='1.5'%3E%3Cpath d='M3 3l7 18 3-7 7-3L3 3z'/%3E%3C/svg%3E"), auto !important;
+}
