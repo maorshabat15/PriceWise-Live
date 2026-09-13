@@ -1,0 +1,6 @@
+{
+  "name": "מרחב עבודה קולינרי",
+  "description": "סטודיו קולינרי ועגלה חכמה להשוואת מחירי סל הקניות ברשתות השיווק בישראל (שופרסל, רמי לוי, יוחננוף, אושר עד, קרפור, ויקטורי) עם המלצות חיסכון PriceWise AI.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
